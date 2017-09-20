@@ -9,6 +9,7 @@ import java.util.Locale;
 import java.util.Map;
 
 import com.woods.boot_repo.combo.Greeting;
+import com.woods.boot_repo.combo.TestVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,12 +32,27 @@ public class ThymeleafController {
 	}
 	@GetMapping("/greeting")
 	public String greetingForm(Model model) {
-		model.addAttribute("greeting", new Greeting());
+		model.addAttribute("greeting", new Greeting());//注意：变量名必须是类名的首字线小写格式
 		return "greeting";
 	}
 
 	@PostMapping("/greeting")
-	public String greetingSubmit(@ModelAttribute Greeting greeting) {
+	public String greetingSubmit(@ModelAttribute Greeting greeting) {//注意：参数名必须是类名的首字线小写格式
 		return "result";
+	}
+	@GetMapping("/testvo")
+	public String testForm(Model model) {
+		model.addAttribute("testVO", new TestVO());//注意：变量名必须是类名的首字线小写格式
+		return "testvo";
+	}
+
+//	@PostMapping("/testvo")
+//	public String testFormSubmit(@ModelAttribute TestVO testVO) {//注意：参数名必须是类名的首字线小写格式
+//		return "testformresult";
+//	}
+	@PostMapping("/testvo")
+	public String submit(@ModelAttribute TestVO abc, Model model) {//另一种写法
+		model.addAttribute("abc", abc);
+		return "testformresult";
 	}
 }

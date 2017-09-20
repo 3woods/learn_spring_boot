@@ -1,8 +1,17 @@
-package com.woods.boot_repo.entity;
+package com.woods.boot_repo.combo;
 
 public class TestVO {
+    private long id;
     private String name;
     private String code;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
