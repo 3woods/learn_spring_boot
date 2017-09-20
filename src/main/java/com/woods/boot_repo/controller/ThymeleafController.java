@@ -8,8 +8,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
 
-import com.woods.boot_repo.entity.TestVO;
-import com.woods.boot_repo.entity.UserEntity;
+import com.woods.boot_repo.combo.Greeting;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,14 +31,12 @@ public class ThymeleafController {
 	}
 	@GetMapping("/greeting")
 	public String greetingForm(Model model) {
-    	TestVO testVO=new TestVO();
-    	testVO.setName("张三丰");
-		model.addAttribute("greeting", testVO);
+		model.addAttribute("greeting", new Greeting());
 		return "greeting";
 	}
 
 	@PostMapping("/greeting")
-	public String greetingSubmit(@ModelAttribute TestVO greeting) {
+	public String greetingSubmit(@ModelAttribute Greeting greeting) {
 		return "result";
 	}
 }
