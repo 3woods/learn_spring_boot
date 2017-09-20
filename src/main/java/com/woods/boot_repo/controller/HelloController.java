@@ -30,10 +30,10 @@ public class HelloController {
         session.setAttribute("uid", uid);
         return session.getId();
     }
-//    @RequestMapping("/login")
-//    public String login(HttpServletRequest request){
-//        String username = request.getParameter("username");
-//        String password = request.getParameter("password");
-//        return username+"   "+password;
-//    }
+    @RequestMapping("/login")
+    public String login(HttpServletRequest request){
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        return username+"   "+password;
+    }
 }
