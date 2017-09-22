@@ -81,5 +81,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.3.11.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-devtools:1.5.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.oracle:ojdbc6:11.2.0.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.directwebremoting:dwr:3.0.2-RELEASE" level="project" />
   </component>
 </module>
